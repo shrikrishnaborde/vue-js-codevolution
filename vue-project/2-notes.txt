@@ -62,3 +62,26 @@ renders html in a tag
   <div>{{greet}} {{ name }}</div>
   <div v-html="channel"></div>
 </template>
+
+4. v-bind
+
+v-bind directive is used to bind to the attributes
+like id etc
+
+<script>
+
+  export default {
+    name : "App",
+    data(){
+      return{
+        headingId:"heading",
+        isDisabled: true
+      }
+    }
+  }
+</script>
+
+<template>
+  <h2 v-bind:id="headingId">Heading</h2>
+   <button v-bind:disabled="isDisabled">Button</button>
+</template>

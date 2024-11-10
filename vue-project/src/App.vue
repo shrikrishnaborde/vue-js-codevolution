@@ -6,7 +6,9 @@
       return{
         name: "Batman",
         greet: "Hello",
-        channel: "<b>codeevoluation</b>"
+        channel: "<b>codeevoluation</b>",
+        headingId:"heading",
+        isDisabled: true
       }
     }
   }
@@ -15,9 +17,7 @@
 <template>
   <div>{{greet}} {{ name }}</div>
   <div v-html="channel"></div>
+  <h2 v-bind:id="headingId">Heading</h2>
+  <button v-bind:disabled="isDisabled">Button</button>
 </template>
 
-<style scoped>
-
-
-</style>
