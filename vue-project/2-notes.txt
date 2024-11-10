@@ -1,3 +1,5 @@
+1. Propert binding
+
 <script>
 
   export default {
@@ -14,7 +16,3 @@
   <div>Hello {{ name }}</div>
 </template>
 
-<style scoped>
-
-
-</style>
