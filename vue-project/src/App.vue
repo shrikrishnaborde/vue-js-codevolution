@@ -25,6 +25,7 @@
   <h2 class="underline" v-bind:class="className">Underlined text</h2>
   <h2 v-bind:class="isPromoted && 'promoted'">Promoted movie</h2>
   <h2 v-bind:class="isSoldOut ? 'soldOut': 'new'">Sold Out ?</h2>
+  <h2 v-bind:class="['new','promoted']">Newly Promoted Movie</h2>
 </template>
 
 <style>
