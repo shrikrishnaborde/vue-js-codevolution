@@ -6,7 +6,7 @@
     name : "App",
     data(){
       return{
-        name: "Vishwas"
+        name: "Shrikrishna"
       }
     }
   }
@@ -15,4 +15,28 @@
 <template>
   <div>Hello {{ name }}</div>
 </template>
+
+we can also use v-text directive for text interpolltaion
+
+<script>
+
+  export default {
+    name : "App",
+    data(){
+      return{
+        name: "Batman",
+        greet: "Hello",
+        channel: "codeevoluation"
+      }
+    }
+  }
+</script>
+
+<template>
+  <div>{{greet}} {{ name }}</div>
+  <div v-text="channel"></div>
+</template>
+
+only drawback for v-text is it replaces the entire text
+in the tag while mustache {{}} can do partial rendering.
 

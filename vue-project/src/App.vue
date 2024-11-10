@@ -4,14 +4,17 @@
     name : "App",
     data(){
       return{
-        name: "Vishwas"
+        name: "Batman",
+        greet: "Hello",
+        channel: "codeevoluation"
       }
     }
   }
 </script>
 
 <template>
-  <div>Hello {{ name }}</div>
+  <div>{{greet}} {{ name }}</div>
+  <div v-text="channel"></div>
 </template>
 
 <style scoped>
