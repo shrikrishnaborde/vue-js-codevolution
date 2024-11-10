@@ -85,3 +85,22 @@ like id etc
   <h2 v-bind:id="headingId">Heading</h2>
    <button v-bind:disabled="isDisabled">Button</button>
 </template>
+
+
+we can also use v-bind to apply dynamic class
+
+<script>
+
+  export default {
+    name : "App",
+    data(){
+      return{
+        className: 'danger'
+      }
+    }
+  }
+</script>
+
+<template>
+  <h2 v-bind:class="className">Underlined text</h2>
+</template>
