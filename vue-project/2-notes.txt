@@ -104,3 +104,39 @@ we can also use v-bind to apply dynamic class
 <template>
   <h2 v-bind:class="className">Underlined text</h2>
 </template>
+
+if we want to apply class on a condition, we can use v-bind
+<script>
+
+  export default {
+    name : "App",
+    data(){
+      return{
+        isPromoted: true,
+        isSoldOut: true
+      }
+    }
+  }
+</script>
+
+<template>
+  <h2 v-bind:class="isPromoted && 'promoted'">Promoted movie</h2>
+  <h2 v-bind:class="isSoldOut ? 'soldOut': 'new'">Sold Out ?</h2>
+</template>
+
+<style>
+.promoted {
+  font-style: italic;
+}
+
+.soldOut {
+  color: red;
+}
+
+.new {
+  color: green;
+}
+
+</style>
+
+

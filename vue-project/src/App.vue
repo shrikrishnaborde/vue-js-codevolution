@@ -9,7 +9,9 @@
         channel: "<b>codeevoluation</b>",
         headingId:"heading",
         isDisabled: true,
-        className: 'danger'
+        className: 'danger',
+        isPromoted: true,
+        isSoldOut: true
       }
     }
   }
@@ -21,12 +23,26 @@
   <h2 v-bind:id="headingId">Heading</h2>
   <button v-bind:disabled="isDisabled">Button</button>
   <h2 class="underline" v-bind:class="className">Underlined text</h2>
+  <h2 v-bind:class="isPromoted && 'promoted'">Promoted movie</h2>
+  <h2 v-bind:class="isSoldOut ? 'soldOut': 'new'">Sold Out ?</h2>
 </template>
 
 <style>
 
 .underline {
   text-decoration: underline;
+}
+
+.promoted {
+  font-style: italic;
+}
+
+.soldOut {
+  color: red;
+}
+
+.new {
+  color: green;
 }
 
 </style>
