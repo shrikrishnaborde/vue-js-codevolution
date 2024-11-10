@@ -147,3 +147,32 @@ if we want to apply class on a condition, we can use v-bind
 </style>
 
 
+5. v-bind: style
+
+we can use v-bind to apply conditional inline styling
+
+<script>
+
+  export default {
+    name : "App",
+    data(){
+      return{
+        highlightColor: 'blue',
+        headerSize : 50,
+        headerStyleObject: {color: 'orange', 'font-size': '20px', padding: '20px'}
+      }
+    }
+  }
+</script>
+
+<template>
+  <h2 v-bind:style="{color: highlightColor}">Inline Style</h2>
+   <h2 v-bind:style="{color: highlightColor, 'font-size': headerSize + 'px', padding: '20px'}">Inline Style</h2>
+  <h2 v-bind:style="headerStyleObject">Inline Style with data</h2>
+</template>
+
+
+
+
+
+

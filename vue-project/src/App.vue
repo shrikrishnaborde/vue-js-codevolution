@@ -11,7 +11,10 @@
         isDisabled: true,
         className: 'danger',
         isPromoted: true,
-        isSoldOut: true
+        isSoldOut: true,
+        highlightColor: 'blue',
+        headerSize : 50,
+        headerStyleObject: {color: 'orange', 'font-size': '20px', padding: '20px'}
       }
     }
   }
@@ -32,6 +35,9 @@
     new: !isPromoted,
     soldOut: isSoldOut
   }">Object conditional movies</h2>
+
+  <h2 v-bind:style="{color: highlightColor, 'font-size': headerSize + 'px', padding: '20px'}">Inline Style</h2>
+  <h2 v-bind:style="headerStyleObject">Inline Style with data</h2>
 </template>
 
 <style>
