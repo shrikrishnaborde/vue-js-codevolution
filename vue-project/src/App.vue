@@ -6,7 +6,7 @@
       return{
         name: "Batman",
         greet: "Hello",
-        channel: "codeevoluation"
+        channel: "<b>codeevoluation</b>"
       }
     }
   }
@@ -14,7 +14,7 @@
 
 <template>
   <div>{{greet}} {{ name }}</div>
-  <div v-text="channel"></div>
+  <div v-html="channel"></div>
 </template>
 
 <style scoped>

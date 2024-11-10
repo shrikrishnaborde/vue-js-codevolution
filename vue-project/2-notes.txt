@@ -40,3 +40,25 @@ we can also use v-text directive for text interpolltaion
 only drawback for v-text is it replaces the entire text
 in the tag while mustache {{}} can do partial rendering.
 
+
+3.v-html
+
+renders html in a tag
+<script>
+
+  export default {
+    name : "App",
+    data(){
+      return{
+        name: "Batman",
+        greet: "Hello",
+        channel: "<b>codeevoluation</b>"
+      }
+    }
+  }
+</script>
+
+<template>
+  <div>{{greet}} {{ name }}</div>
+  <div v-html="channel"></div>
+</template>
