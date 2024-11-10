@@ -1,0 +1,9 @@
+Vue installation command
+
+Preferred way is using vite
+
+npm create vue@latest
+
+npm i
+
+npm run dev
