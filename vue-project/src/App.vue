@@ -14,7 +14,8 @@
         isSoldOut: true,
         highlightColor: 'blue',
         headerSize : 50,
-        headerStyleObject: {color: 'orange', 'font-size': '20px', padding: '20px'}
+        headerStyleObject: {color: 'orange', 'font-size': '20px', padding: '20px'},
+        baseStyleObject: { margin : '10px'}
       }
     }
   }
@@ -38,6 +39,7 @@
 
   <h2 v-bind:style="{color: highlightColor, 'font-size': headerSize + 'px', padding: '20px'}">Inline Style</h2>
   <h2 v-bind:style="headerStyleObject">Inline Style with data</h2>
+  <h2 v-bind:style="[headerStyleObject,baseStyleObject]">Multiple styles object</h2>
 </template>
 
 <style>

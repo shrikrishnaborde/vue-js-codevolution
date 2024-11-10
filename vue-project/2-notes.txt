@@ -171,7 +171,23 @@ we can use v-bind to apply conditional inline styling
   <h2 v-bind:style="headerStyleObject">Inline Style with data</h2>
 </template>
 
+we can also apply multiple style objects to the tag
 
+<script>
+
+  export default {
+    name : "App",
+    data(){
+      return{
+        headerStyleObject: {color: 'orange', 'font-size': '20px', padding: '20px'}
+      }
+    }
+  }
+</script>
+
+<template>
+   <h2 v-bind:style="[headerStyleObject,baseStyleObject]">Multiple styles object</h2>
+</template>
 
 
 
