@@ -1,4 +1,4 @@
-Vue installation command
+1. Vue installation command
 
 Preferred way is using vite
 
@@ -7,3 +7,26 @@ npm create vue@latest
 npm i
 
 npm run dev
+
+
+2. File
+
+index.html --> have 
+
+<div id="app"></div>
+
+whhere whole application is mounted
+
+in main.js we wite which component do we mout to app id div
+
+createApp(App).mount('#app')
+
+and in App.vue is the main component
+
+3..Vue File
+
+.vue file conatins components
+
+has 3 parts <script>,<template>,<style>.
+
+each part contains logic, html, css for the component
