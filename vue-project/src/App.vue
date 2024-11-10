@@ -26,6 +26,7 @@
   <h2 v-bind:class="isPromoted && 'promoted'">Promoted movie</h2>
   <h2 v-bind:class="isSoldOut ? 'soldOut': 'new'">Sold Out ?</h2>
   <h2 v-bind:class="['new','promoted']">Newly Promoted Movie</h2>
+  <h2 v-bind:class="[isPromoted && 'promoted', isSoldOut ? 'soldOut': 'new']">Array conditional movie</h2>
 </template>
 
 <style>
